@@ -88,9 +88,16 @@ All import methods allow you to pass a `$remodeId` with your document. The remot
 
 **Upload Document From Local File System**
 
-Uploads a document from your local filesystem.
+Reads a file from your local filesystem and uploads it to your document parser.
 ```php
 $docparser->uploadDocumentByPath($parserId, $filePath, $remoteId = null);
+```
+
+**Create Document By Providing File Content**
+
+This method creates a new document in your document parser based on the raw file content or a file pointer. Additionally, a file name can be provided.
+```php
+$docparser->uploadDocumentByContents($parserId, $file, $remoteId = null, $filename = null)
 ```
 
 **Fetch Document From An URL**
@@ -106,7 +113,7 @@ The Docparser API allows you to retrieve the extracted document data. You can ei
 
 Both methods used for retrieving parsed data allow you to specify the "format" parameter - this allows you to choose between a flat structure and a nested array structure. For most implementations, leaving it as "object" will serve you fine.
 
-<pre>Please note: Polling the API for new results is not the recommended way of obtaining your data. A much better way than polling our API for parsed data is to use [Webhooks](https://docparser.com/integration/webhooks). By using webhooks, parsed data will be pushed to your API immediately after parsing. </pre>
+> Please note: Polling the API for new results is not the recommended way of obtaining your data. A much better way than polling our API for parsed data is to use [Webhooks](https://docparser.com/integration/webhooks). By using webhooks, parsed data will be pushed to your API immediately after parsing.
 
 **Get Data By Document ID**
 
