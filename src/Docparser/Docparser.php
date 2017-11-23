@@ -35,7 +35,7 @@ class Docparser
      * @api
      * @param String $apiToken
      */
-    public function __construct(String $apiToken)
+    public function __construct($apiToken)
     {
         $this->apiToken = $apiToken;
     }
