@@ -93,11 +93,11 @@ Reads a file from your local filesystem and uploads it to your document parser.
 $docparser->uploadDocumentByPath($parserId, $filePath, $remoteId = null);
 ```
 
-**Create Document By Providing File Content**
+**Upload Document By Providing File Content**
 
 This method creates a new document in your document parser based on the raw file content or a file pointer. Additionally, a file name can be provided.
 ```php
-$docparser->uploadDocumentByContents($parserId, $file, $remoteId = null, $filename = null)
+$docparser->uploadDocumentByContents($parserId, $file, $remoteId = null, $filename = null);
 ```
 
 **Fetch Document From An URL**
@@ -115,14 +115,14 @@ Both methods used for retrieving parsed data allow you to specify the "format" p
 
 > Please note: Polling the API for new results is not the recommended way of obtaining your data. A much better way than polling our API for parsed data is to use [Webhooks](https://docparser.com/integration/webhooks). By using webhooks, parsed data will be pushed to your API immediately after parsing.
 
-**Get Data By Document ID**
+**Get Data Of One Document**
 
 Fetches the parsed data for a specific document by providing a `$parserId` and the `$documentId`. The `$documentId` is the Docparser Document ID which is returned when importing a document through the API.
 ```php
-$docparser->getResultsByDocument($parserId, $documentId, $format = 'object')
+$docparser->getResultsByDocument($parserId, $documentId, $format = 'object');
 ```
 
-**List Data Of Multiple Documents**
+**Get Data Of Multiple Documents**
 
 Fetches the results of multiple documents parsed by a specific document parser. This function allows you granular filtering and ordering of the results. Please see our [documentation](https://dev.docparser.com/?shell#get-multiple-data-sets) for the list of available parameters.
 ```php
