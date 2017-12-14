@@ -28,7 +28,7 @@
 
 ## Documentation
 
-For a generic description of the Docparser API, please see our developer documentation [here](https://docparser.com/). Our developer documentation lists all available API methods with their parameters and expected responses.
+For a generic description of the Docparser API, please see our developer documentation [here](https://dev.docparser.com/). Our developer documentation lists all available API methods with their parameters and expected responses.
 
 ## Installation
 
