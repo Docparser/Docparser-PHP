@@ -23,10 +23,6 @@ class DocparserExceptionHandler
      */
     public static function rethrow($e)
     {
-        if ($e->getResponse()->getStatusCode() == 400) {
-            throw new DocparserApiException("Bad Request: re-check your authentication details", 400);
-        } else {
-            throw $e;
-        }
+        throw $e;
     }
 }
