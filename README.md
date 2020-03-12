@@ -84,7 +84,7 @@ $docparser->getParsers();
 
 The Docparser PHP SDK offers three different methods for importing your document.
 
-All import methods allow you to pass a `$remodeId` with your document. The remote ID can be any arbitrary string with a maximum length of 255 characters. The submitted value will be kept throughout the processing and will be available later once you obtain the parsed data with our API or through Webhooks.
+All import methods allow you to pass a `$remoteId` with your document. The remote ID can be any arbitrary string with a maximum length of 255 characters. The submitted value will be kept throughout the processing and will be available later once you obtain the parsed data with our API or through Webhooks.
 
 **Upload Document From Local File System**
 
