@@ -74,6 +74,23 @@ class Docparser
     }
 
     /**
+     * fetches all of the model layouts associated with a given parser
+     *
+     * @api
+     * @param $parserId
+     * @return bool|mixed|\Psr\Http\Message\ResponseInterface|string
+     */
+    public function getParserModelLayouts($parserId)
+    {
+        $request = $this->createRequest();
+        $endpoint = 'parser/models/' . $parserId;
+
+        $response = $request->makeGetRequest($endpoint);
+
+        return $response;
+    }
+    
+    /**
      * uploads documents from a given file path
      *
      * @api
