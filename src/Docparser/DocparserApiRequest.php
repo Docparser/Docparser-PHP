@@ -113,9 +113,12 @@ class DocparserApiRequest
             $request = [
                 'multipart' => [
                     [
-                        'name' => 'file',
+                        'name' => 'file_content',
                         'contents' => $fileContent,
-                        'filename' => ($filename) ? $filename : null
+                    ],
+                    [
+                        'name' => 'file_name',
+                        'contents' => $filename,
                     ],
                     [
                         'name' => 'remote_id',
